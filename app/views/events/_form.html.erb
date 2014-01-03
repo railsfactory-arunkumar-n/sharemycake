@@ -1,0 +1,50 @@
+
+	<%= form_for(@event)  do |f| %>
+		<% if @event.errors.any? %>
+			<div id="error_explanation">
+				<h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+				<ul>
+				<% @event.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+				</ul>
+			</div>
+		<% end %>
+
+		<div class="field">
+		
+			<%#= f.label :user_id %><br>
+			<%#= f.hidden :user_id %>
+		</div>
+		<div class="field">
+	
+			<%= f.label :mobile_no %><br>
+			<%= f.text_field :mobile_no %>
+			
+		</div>
+		<div class="field">
+		
+			<%= f.label :title %><br>
+			<%= f.text_field :title %>
+		</div>
+		<div class="field">
+			
+			<%= f.label :date %><br>
+			<%= f.date_select :date %>
+			<%#= f. :date, :as => :datetime_picker %>
+
+	<%#= f.input :closing_date, :as => :date_picker %>
+
+	<%#= f.input :begin-at, :as => :time_picker %>
+		</div>
+		<div class="field">
+			<%= f.label :description %><br>
+			<%= f.text_area :description %>
+		</div>
+		<div class="actions">
+		<p>
+			<%= f.submit "contineu >>"%>
+		</p></div>
+	<% end %>
+

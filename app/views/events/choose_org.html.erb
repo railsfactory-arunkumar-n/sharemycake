@@ -1,0 +1,21 @@
+<%= form_for( :org ,url:email_template_path ) do |f|%> 
+<% @org.each do |o| %>
+<div  >
+ <%= f.radio_button "name" , o.name  %>
+ <%=o.name%>
+ </div>
+ 
+ 
+ 
+<%end%>
+ <div>
+ <%=f.label :share %>
+ <input type="text" name ="share" >
+ </div>
+<div >
+ 
+  <%=f.submit "continue >>"%>
+  </div>
+<%end%>
+
+	

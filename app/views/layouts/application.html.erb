@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Sharemycake</title>
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="header">
+		<div>
+			
+			
+			<a  id="logo" href="www.google.com"> <%= image_tag(image_url 'logo.png') %></a>
+			<ul>
+				<li class="selected">
+					<a ><%=link_to "home" , home_index_path%> </a>
+				</li>
+				<li>
+					<a ><%=link_to "About", home_show_path%></a>
+				</li>
+				<li>
+					<a ><%=link_to "organization", home_index_path%></a>
+				</li>
+				<li>
+					<a ><%=link_to "create event", new_event_path%></a>
+				</li>
+				
+			</ul>
+			<div>
+				<p>
+					<%=link_to "login",home_index_path%><%= "       " %><%=link_to "register" , home_index_path %> 
+				</p>
+			</div>
+		</div>
+	</div>
+	<%=yield%>
+	<%=link_to "logout ", destroy_user_session_path , method: :delete %>
+	<div class="footer">
+		<div>
+			<div>
+				
+				<p>
+					
+				</p>
+				<!--<form action="index.ht">
+					<input type="text" value="Email Address" onblur="this.value=!this.value?'Email Address':this.value;" onfocus="this.select()" onclick="this.value='';">
+					<input type="submit" value="Get">
+				</form>
+			</div>
+			<div><!--
+				<h4>LATEST BLOG</h4>
+				<ul>
+					<li>
+						<p>
+							<a href="blog.html">Phasellus parea ut di tincidunt blandit nisi ut pellentesque.</a>
+						</p>
+						<span>11/07/2011</span>
+					</li>
+					<li>
+						<p>
+							<a href="blog.html">Donec dictum semper augue, ut consectetur magna posuere eget.</a>
+						</p>
+						<span>11/03/2011</span>
+					</li>
+					<li>
+						<p>
+							<a href="blog.html">Cum sociis natoque penatibus et magnis dis parturient.</a>
+						</p>
+						<span>11/27/2011</span>
+					</li>
+				</ul>
+			</div>-->
+			<div class="connect">
+			
+				<h4>FOLLOW US:</h4>
+				<a href="http://freewebsitetemplates.com/go/facebook/" class="facebook">Facebook</a> <a href="http://freewebsitetemplates.com/go/twitter/" class="twitter">Twitter</a> <a href="http://freewebsitetemplates.com/go/googleplus/" class="google">Google+</a>
+			</div>
+		</div>
+		<div>
+			<p>
+				Summer Camp &#169; 2011 | All Rights Reserved
+			</p>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<%=form_for( :template ,url:add_contact_path ) do |f| %>
+<div>
+  <ul>
+	  <li>
+		   <a></a>
+			 <a><%= image_tag(image_url 'org3.jpg' ,:size =>"85x85")  %></a>
+			 <%= f.radio_button "id" ,1   %>
+		</li>
+		<li>
+		   <a></a>
+			 <a><%= image_tag(image_url 'org3.jpg' )  %></a>
+			 <%= f.radio_button "id" ,2   %>
+		</li>
+		<li>
+		   <a></a>
+			 <a><%= image_tag(image_url 'org3.jpg' )  %></a>
+			 <%= f.radio_button "id" ,3   %>
+		</li>
+	 </ul>
+</div>
+<div>
+  <%=f.submit "contineu >>" %>
+</div>
+<%end%>
+

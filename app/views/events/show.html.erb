@@ -1,0 +1,25 @@
+<div id="cause">
+ <p>
+ <%cause= Cause.find_by_name("education") %>
+ <h4> <%=link_to "Education" , choose_org_path(:id=>cause.id)%></h4>
+ 
+ <p>
+</div>
+
+
+<div id="cause">
+<%cause= Cause.find_by_name("pollution") %>
+ <h4><%=link_to "Pollution" ,choose_org_path(:id=>cause.id)%></h4>
+</div>
+
+
+<div id="cause">
+<%cause= Cause.find_by_name("childern") %>
+ <h4><%=link_to "Childern" , choose_org_path(:id=>cause.id)%></h4>
+</div>
+
+
+<div id="cause">
+<%cause= Cause.find_by_name("social") %>
+ <h4><%=link_to "Social" , choose_org_path(:id=>cause.id)%></h4>
+</div>
